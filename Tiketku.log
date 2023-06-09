@@ -1,0 +1,4 @@
+2023-06-09T11:20:30.068+07:00  INFO 20556 --- [restartedMain] c.a.t.FinalProjectApplication            : Starting FinalProjectApplication using Java 17.0.2 with PID 20556 (E:\Intellij Project\Final-Project\target\classes started by EnVyx in E:\Intellij Project\Final-Project)
+2023-06-09T11:20:30.071+07:00  INFO 20556 --- [restartedMain] c.a.t.FinalProjectApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-06-09T11:20:38.656+07:00  INFO 20556 --- [restartedMain] c.a.t.FinalProjectApplication            : Started FinalProjectApplication in 9.03 seconds (process running for 9.877)
+2023-06-09T11:21:19.094+07:00  INFO 20556 --- [http-nio-8080-exec-1] c.a.t.Controller.UserController          : string2
