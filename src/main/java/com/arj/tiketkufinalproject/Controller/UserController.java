@@ -92,7 +92,7 @@ public class UserController {
         try {
             UsersEntity userReset = new UsersEntity();
             userReset.setEmail(resetPasswordRequest.getEmail());
-            userReset.setPassword(resetPasswordRequest.getPassword());
+            userReset.setPassword(resetPasswordRequest.getNew_password());
             userReset.setToken(jwtService.generateToken(resetPasswordRequest.getEmail()));
             UsersEntity user = us.resetPassword(userReset.getEmail(),userReset.getPassword());
             log.info(String.valueOf(user), "Password Berhasil Diganti " + user.getUuid_user());
