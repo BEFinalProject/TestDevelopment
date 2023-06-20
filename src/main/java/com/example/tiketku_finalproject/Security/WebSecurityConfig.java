@@ -1,7 +1,6 @@
-package com.arj.tiketkufinalproject.Security;
+package com.example.tiketku_finalproject.Security;
 
-
-import com.arj.tiketkufinalproject.Filter.JwtAuthFilter;
+import com.example.tiketku_finalproject.Filter.JwtAuthFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -51,9 +50,9 @@ public class WebSecurityConfig{
                 .csrf()
                 .disable()
                 .authorizeHttpRequests()
-                .requestMatchers("/Users/**","/swagger-ui/**","/v3/api-docs/**").permitAll()
+                .requestMatchers("/Airplane/**","/Airport/**","/Schedules/**","/TempTransacation/**","/HistoryTransaction/**","/Users/**","/swagger-ui/**","/v3/api-docs/**").permitAll()
 //                .anyRequest().authenticated().and().httpBasic() formLogin()
-                .and().authorizeHttpRequests().requestMatchers("/Users/**","/Film/**","/Jadwal/**","/Report/**","/Transaction/**","/DataTransaction/**").authenticated().and().sessionManagement()
+                .and().authorizeHttpRequests().requestMatchers("/City/findCityTicket","/Film/**","/Jadwal/**","/Report/**","/Transaction/**","/DataTransaction/**").authenticated().and().sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS).and().authenticationProvider(authenticationProvider())
                 .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class).build();
     }

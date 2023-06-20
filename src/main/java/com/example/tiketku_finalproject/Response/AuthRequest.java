@@ -1,4 +1,4 @@
-package com.arj.tiketkufinalproject.Response;
+package com.example.tiketku_finalproject.Response;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,8 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class ResetPasswordRequest {
+public class AuthRequest {
     private String email;
     private String password;
-    private String token;
 }

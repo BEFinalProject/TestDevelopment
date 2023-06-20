@@ -1,9 +1,9 @@
-package com.arj.tiketkufinalproject.Controller;
+package com.example.tiketku_finalproject.Controller;
 
-import com.arj.tiketkufinalproject.Model.UsersEntity;
-import com.arj.tiketkufinalproject.Response.*;
-import com.arj.tiketkufinalproject.Service.JwtService;
-import com.arj.tiketkufinalproject.Service.UsersService;
+import com.example.tiketku_finalproject.Model.UsersEntity;
+import com.example.tiketku_finalproject.Response.*;
+import com.example.tiketku_finalproject.Service.JwtService;
+import com.example.tiketku_finalproject.Service.UsersService;
 import io.swagger.annotations.Api;
 import io.swagger.v3.oas.annotations.Operation;
 import lombok.extern.slf4j.Slf4j;
@@ -92,7 +92,7 @@ public class UserController {
         try {
             UsersEntity userReset = new UsersEntity();
             userReset.setEmail(resetPasswordRequest.getEmail());
-            userReset.setPassword(resetPasswordRequest.getPassword());
+            userReset.setPassword(resetPasswordRequest.getNew_password());
             userReset.setToken(jwtService.generateToken(resetPasswordRequest.getEmail()));
             UsersEntity user = us.resetPassword(userReset.getEmail(),userReset.getPassword());
             log.info(String.valueOf(user), "Password Berhasil Diganti " + user.getUuid_user());
